@@ -91,7 +91,7 @@ STORIES = (
 )
 
 REGIONS = ("MIDDLE EAST", "EUROPE", "AMERICAS", "ASIA", "AFRICA", "WORLD", "SPORT", "CULTURE")
-FIELDS = ("War & security", "Politics", "Justice", "Markets & business", "Tech & AI", "Disaster", "Climate", "Sport", "Culture")
+FIELDS = ("War & security", "Politics", "Justice", "Markets & business", "Tech & AI", "Disaster", "Sport", "Culture")
 
 DATE_CHECK = (
     "DATE CHECK — Left out on purpose because they broke before today: the Russian corvette Merkury sinking off Benghazi (22–23 Nov); "
@@ -405,7 +405,7 @@ def draw_header(page):
     page.line([(24, 36), (1000, 36)], INK, 0.8)
     page.text(512, 41, "THE WORLD IN ONE DAY", "masthead", 74, INK, "center")
     page.rect((24, 103, 1000, 126), RED)
-    page.text(512, 108, "THURSDAY, 26 NOVEMBER 2026 — 43 STORIES · 9 REGIONS · ONE PAGE", "bold", 14, PAPER, "center")
+    page.text(512, 108, "THURSDAY, 26 NOVEMBER 2026 — 43 STORIES · 8 REGIONS · ONE PAGE", "bold", 14, PAPER, "center")
     regions = Counter(story.region for story in STORIES)
     fields = Counter(story.field for story in STORIES)
     assert sum(regions.values()) == sum(fields.values()) == 43
